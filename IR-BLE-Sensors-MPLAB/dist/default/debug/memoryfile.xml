@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\IR_BLE_Buzzer.X.debug.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>65536</length>
+      <used>31866</used>
+      <free>33670</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>3968</length>
+      <used>1140</used>
+      <free>2828</free>
+    </memory>
+  </executable>
+</project>

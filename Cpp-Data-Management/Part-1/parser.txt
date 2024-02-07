@@ -1,0 +1,193 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <iomanip>
+#include <chrono>
+#include <vector>
+#include <cmath>
+
+class Acceleration {
+public:
+    float x_g;  // X-axis value in 'g' units
+    float y_g;  // Y-axis value in 'g' units
+    float z_g;  // Z-axis value in 'g' units
+
+    int valid_messages;  // Counter for valid accelerometer messages processed
+    int invalid_checksum_messages;  // Counter for messages with invalid checksums
+    int alerts_encountered;  // Counter for triggered alerts
+    float max_x;  // Maximum value encountered for the X-axis
+    float max_y;  // Maximum value encountered for the Y-axis
+    float max_z;  // Maximum value encountered for the Z-axis
+    bool z_axis_offset_enabled;  // Flag indicating if Z-axis offset is enabled
+    bool alert_triggered;  // Flag to monitor alert trigger status
+
+    // Constructor initializing values and counters
+    Acceleration(float x_val, float y_val, float z_val)
+        : x_g(x_val), y_g(y_val), z_g(z_val), valid_messages(0), 
+          invalid_checksum_messages(0), alerts_encountered(0), 
+          max_x(0.0f), max_y(0.0f), max_z(0.0f), z_axis_offset_enabled(false) {}
+
+    // Method to enable Z-axis offset
+    void enableZAxisOffset() {
+        z_axis_offset_enabled = true;
+    }
+
+    // Update statistics based on current values
+    void updateStatistics(float x, float y, float z) {
+        valid_messages++;
+        if (x > max_x) max_x = x;
+        if (y > max_y) max_y = y;
+        if (z > max_z) max_z = z;
+    }
+
+    // Increment count for invalid checksum messages
+    void incrementInvalidChecksumCount() {
+        invalid_checksum_messages++;
+    }
+
+    // Check for consecutive alerts based on Y-axis readings
+    void checkAlert(float y) {
+        static int consecutive_alerts = 0;
+
+        if (alert_triggered) {
+            if (std::abs(y) > 0.2f) {
+                consecutive_alerts++;
+                if (consecutive_alerts >= 3) {
+                    alerts_encountered++;
+                }
+            } else {
+                consecutive_alerts = 0;
+                alert_triggered = false;
+            }
+        } else {
+            if (std::abs(y) > 0.2f) {
+                consecutive_alerts++;
+                if (consecutive_alerts >= 3) {
+                    alert_triggered = true;
+                    alerts_encountered++;
+                }
+            } else {
+                consecutive_alerts = 0;
+            }
+        }
+    }
+
+    // Format axis values and add [ALERT] tag if alert triggered
+    std::string getFormattedValues() const {
+        std::stringstream ss;
+        ss << std::fixed << std::setprecision(2);
+        ss << "X=" << x_g << ", Y=" << y_g << ", Z=" << z_g;
+        if (alert_triggered) {
+            ss << " [ALERT]";
+        }
+        return ss.str();
+    }
+};
+
+int main() {
+    std::ifstream inputFile("sample_data.txt"); // Change the file path accordingly
+    std::ofstream outputFile("output.txt");
+    std::ofstream validChecksumFile("valid_checksum_lines.txt"); // Open a new file for writing original lines
+
+    if (!inputFile.is_open() || !outputFile.is_open() || !validChecksumFile.is_open()) {
+        std::cout << "Unable to open one of the files." << std::endl;
+        return 1;
+    }
+
+    std::time_t currentTime = std::time(nullptr);
+    std::tm* currentTm = std::gmtime(&currentTime); // Get current time in UTC
+
+    // Calculate the offset for Netherlands timezone (CET/CEST)
+    int netherlandsOffset = 1; // Change this based on the offset (in hours) from UTC
+
+    // Adjust hours by the offset for Netherlands timezone
+    currentTm->tm_hour += netherlandsOffset;
+    std::mktime(currentTm); // Normalize after adjusting hours
+
+    std::stringstream ss;
+    ss << std::put_time(currentTm, "%Y-%m-%dT%H:%M:%SZ");
+
+    // Write time to console and output file
+    outputFile << ss.str() << std::endl;
+    std::cout << "Current time in Netherlands timezone: " << ss.str() << std::endl;
+
+    std::string line;
+    Acceleration acc(0, 0, 0);
+    
+    char enableOffset;
+    std::cout << "Do you want to enable Z-axis offset? (y/n): ";
+    std::cin >> enableOffset;
+
+    if (enableOffset == 'y' || enableOffset == 'Y') {
+        acc.enableZAxisOffset();
+    }else{
+        //Keep Offset Disabled
+    }
+    
+    while (std::getline(inputFile, line)) {
+        if (line.find("#G4") == 0) {
+            std::string checksum = line.substr(line.length() - 2);
+            int sum = 0;
+            for (size_t i = 0; i < line.length() - 2; ++i) {
+                sum += static_cast<int>(line[i]);
+                sum &= 0xFF;
+            }
+            std::stringstream ss;
+            ss << std::uppercase << std::hex << sum; //Added the uppercase identifier to compare checksums
+            std::string calculatedChecksum = ss.str();
+            if (calculatedChecksum == checksum) {
+                // If the calculated checksum matches the extracted checksum from the line
+                validChecksumFile << line << std::endl;
+                std::string xStr = line.substr(4, 3);
+                std::string yStr = line.substr(7, 3);
+                std::string zStr = line.substr(10, 3);
+                // Extract X, Y, Z values as strings from specific positions in the line
+                int xVal = std::stoi(xStr, nullptr, 16);
+                int yVal = std::stoi(yStr, nullptr, 16);
+                int zVal = std::stoi(zStr, nullptr, 16);
+                // Check and handle 2's complement for signed values
+                if (xVal > 2047) xVal -= 4096;
+                if (yVal > 2047) yVal -= 4096;
+                if (zVal > 2047) zVal -= 4096;
+                // Constants for conversion calculations
+                const float maxForce = 32.0f;
+                const float scale_factor = maxForce / 2047.0f;
+                // Convert raw values to 'g' units
+                float xG = static_cast<float>(xVal) * scale_factor;
+                float yG = static_cast<float>(yVal) * scale_factor;
+                float zG = static_cast<float>(zVal) * scale_factor;
+                // Apply Z-axis offset if enabled
+                if (acc.z_axis_offset_enabled) {
+                    zG -= 1.0f;
+                }
+                // Update statistics and check for alerts
+                acc.updateStatistics(xG, yG, zG);
+                acc.checkAlert(yG);
+                // Update Acceleration object's x, y, z values
+                acc.x_g = xG;
+                acc.y_g = yG;
+                acc.z_g = zG;
+                // Write formatted values to the output file
+                outputFile << acc.getFormattedValues() << std::endl;
+            } else {
+                // If the calculated checksum does not match the extracted checksum, increment invalid checksum count
+                acc.incrementInvalidChecksumCount();
+            }
+
+        }
+    }
+
+    inputFile.close();
+    outputFile.close();
+    validChecksumFile.close();
+
+    std::cout << "Total valid messages: " << acc.valid_messages << std::endl;
+    std::cout << "Total invalid checksum messages: " << acc.invalid_checksum_messages << std::endl;
+    std::cout << "Maximum X-axis value: " << acc.max_x << std::endl;
+    std::cout << "Maximum Y-axis value: " << acc.max_y << std::endl;
+    std::cout << "Maximum Z-axis value: " << acc.max_z << std::endl;
+    std::cout << "Total alerts encountered: " << acc.alerts_encountered << std::endl;
+
+    return 0;
+}

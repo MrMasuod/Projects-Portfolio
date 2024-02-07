@@ -1,0 +1,179 @@
+[
+    {
+        "id": "e942b0b7254db361",
+        "type": "tab",
+        "label": "Flow 17",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "60e30e2507495001",
+        "type": "rpi-gpio in",
+        "z": "e942b0b7254db361",
+        "name": "Rain Sensor Digital Input",
+        "pin": "18",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "3fd4dc05ceb5e175",
+                "234a9ea1dd68ae6e"
+            ]
+        ]
+    },
+    {
+        "id": "d1f0856f2f783da2",
+        "type": "rpi-gpio out",
+        "z": "e942b0b7254db361",
+        "name": "Servo Out",
+        "pin": "17",
+        "set": "",
+        "level": "0",
+        "freq": "50",
+        "out": "pwm",
+        "bcm": true,
+        "x": 620,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "87573c0b77d763e4",
+        "type": "rpi-gpio out",
+        "z": "e942b0b7254db361",
+        "name": "Buzzer Out",
+        "pin": "27",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 610,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3fd4dc05ceb5e175",
+        "type": "function",
+        "z": "e942b0b7254db361",
+        "name": "Angle 45",
+        "func": "// Calculate the duty cycle value for 7.5%\nconst dutyCycle = 6.25;\n\n// Convert the duty cycle percentage to a value in the range of 0-100\nconst pwmValue = Math.round((dutyCycle / 100) * 100);\n\n// Create the message payload to be sent to the PWM output\nmsg.payload = pwmValue;\n\n// Return the modified message\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 200,
+        "wires": [
+            [
+                "d1f0856f2f783da2"
+            ]
+        ]
+    },
+    {
+        "id": "234a9ea1dd68ae6e",
+        "type": "function",
+        "z": "e942b0b7254db361",
+        "name": "Buzzer Time",
+        "func": "// Check if the input message is received\nif (msg.payload) {\n    // Set the payload to start the buzzer\n    msg.payload = true;\n\n    // Send the message to start the buzzer\n    node.send(msg);\n\n    // Wait for 5 seconds before stopping the buzzer\n    setTimeout(function () {\n        // Set the payload to stop the buzzer after 5 seconds\n        msg.payload = false;\n\n        // Send the message to stop the buzzer\n        node.send(msg);\n    }, 5000); // 5000 milliseconds = 5 seconds\n}\n\n// Return null as we're not passing a message along in the normal flow\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "87573c0b77d763e4"
+            ]
+        ]
+    },
+    {
+        "id": "922adbf516fc3b6c",
+        "type": "rpi-gpio in",
+        "z": "e942b0b7254db361",
+        "name": "Homing",
+        "pin": "23",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 70,
+        "y": 380,
+        "wires": [
+            [
+                "e28ebc6af26018c0"
+            ]
+        ]
+    },
+    {
+        "id": "054cd8bacaaac0e7",
+        "type": "rpi-gpio out",
+        "z": "e942b0b7254db361",
+        "name": "Servo Out",
+        "pin": "17",
+        "set": "",
+        "level": "0",
+        "freq": "50",
+        "out": "pwm",
+        "bcm": true,
+        "x": 620,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e28ebc6af26018c0",
+        "type": "function",
+        "z": "e942b0b7254db361",
+        "name": "Angle 0",
+        "func": "// Calculate the duty cycle value for 7.5%\nconst dutyCycle = 5;\n\n// Convert the duty cycle percentage to a value in the range of 0-100\nconst pwmValue = Math.round((dutyCycle / 100) * 100);\n\n// Create the message payload to be sent to the PWM output\nmsg.payload = pwmValue;\n\n// Return the modified message\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 400,
+        "wires": [
+            [
+                "054cd8bacaaac0e7"
+            ]
+        ]
+    },
+    {
+        "id": "bf633940864323d7",
+        "type": "comment",
+        "z": "e942b0b7254db361",
+        "name": "Set the rod to 90 degrees",
+        "info": "",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a146748e886ed67a",
+        "type": "comment",
+        "z": "e942b0b7254db361",
+        "name": "Sound the Buzzer",
+        "info": "",
+        "x": 590,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "33fcc56328b47f6b",
+        "type": "comment",
+        "z": "e942b0b7254db361",
+        "name": "Set the rod back to zero",
+        "info": "",
+        "x": 600,
+        "y": 440,
+        "wires": []
+    }
+]

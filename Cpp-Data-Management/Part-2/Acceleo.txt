@@ -1,0 +1,36 @@
+#ifndef ACCELEO_H
+#define ACCELEO_H
+#include <iostream>
+
+using namespace std;
+
+class Acceleo
+{
+    
+    public:
+    Acceleo();
+    void initialization();
+    bool checkSumValidation(char[]);
+    int accelerometerValue(char []);
+    char hexToBin (char x);
+    void acceloReading(char[]);
+    int acceleroCalculation(uint16_t) ;
+    void writeFile(char []);
+    void combineFloatsToString(float , float , float , bool, char* );
+    void setZoffset(bool);
+    unsigned int SignedVal(char hexValue[3]);
+    int checksum(char checksumval[13]);
+   
+    bool Z_offset = false;
+    int total_Nonvalid_checksum;
+    int total_Accelerometer_value;
+    int total_alert_value;
+    float maxX;
+    float maxY;
+    float maxZ;
+    protected:
+    
+    private:
+};
+
+#endif // ACCELEO_H

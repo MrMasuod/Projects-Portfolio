@@ -1,0 +1,61 @@
+#include <iostream>
+#include "Acceleo.h"
+
+using namespace std;
+
+const int MAX_ENTRIES = 5800; // Maximum number of entries
+const int MAX_ENTRY_LENGTH = 16; // Maximum length of each entry (including null terminator)
+
+int main() {
+    Acceleo accl;
+    accl.initialization();
+    char entries[MAX_ENTRIES][MAX_ENTRY_LENGTH]; // Array to store the input data
+    int entryIndex = 0;
+    
+    FILE *file = fopen("sample_data.txt", "r"); // Open the file in read mode
+    if (file != nullptr) {
+        int charCount = 0;
+        char ch;
+        // Read character by character and save lines starting with #G until EOF
+        while ((ch = fgetc(file)) != EOF && entryIndex < MAX_ENTRIES) {
+            if (ch == '#' && charCount == 0) {
+                charCount = 0;
+                entries[entryIndex][charCount++] = ch; // Include '#' in the entry
+            } else if (ch == 'G' && charCount == 1) {
+                entries[entryIndex][charCount++] = ch; // Include 'G' in the entry
+            } else if (ch == '\n' && charCount > 1) {
+                entries[entryIndex][charCount] = '\0'; // Null-terminate the string
+                // Process the entry here
+                accl.acceloReading(entries[entryIndex]);
+                accl.checksum(entries[entryIndex]);
+
+                // Output the processed entry
+                std::cout << "Processed Entry " << entryIndex + 1 << ": " << entries[entryIndex] << std::endl;
+
+                entryIndex++;
+                charCount = 0; // Reset charCount for the next entry
+            } else if (charCount > 1 && charCount < MAX_ENTRY_LENGTH - 1) {
+                entries[entryIndex][charCount++] = ch;
+            } else {
+                charCount = 0; // Reset if the block is invalid
+            }
+        }
+
+        fclose(file); // Close the file
+    } else {
+        std::cout << "Unable to open the file." << std::endl;
+        return 1;
+    }
+
+    
+    std::cout << "Z Offset: " << accl.Z_offset << std::endl;
+    std::cout << "Non-Valid Checksum: " << accl.total_Nonvalid_checksum << std::endl;
+    std::cout << "Accelerometer Value: " << accl.total_Accelerometer_value << std::endl;
+    std::cout << "Alert Value: " << accl.total_alert_value << std::endl;
+    
+    std::cout << "Maximum X Value: " << static_cast<float>(static_cast<int>(accl.maxX * 100)) / 100 << " Maximum Y Value: " << static_cast<float>(static_cast<int>(accl.maxY * 100)) / 100 << " Maximum Z Value: " << static_cast<float>(static_cast<int>(accl.maxZ * 100)) / 100 << std::endl;
+    
+    std::cout << "Exiting." << std::endl;
+
+    return 0;
+}

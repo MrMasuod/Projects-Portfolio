@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 279, "left": 47.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 165.87,
+      "left": 142.81,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": 87.29,
+      "left": 147.05,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic",
+      "top": 155.1,
+      "left": 207.1,
+      "attrs": { "distance": "88" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 156,
+      "left": 40.2,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": 186.8, "left": 118.3, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.1", "ultrasonic:GND", "black", [ "v-8", "*", "v8" ] ],
+    [ "uno:5V", "ultrasonic:VCC", "red", [ "v16", "h-96", "*", "v12" ] ],
+    [ "uno:GND.1", "led:C", "black", [] ],
+    [ "r1:1", "led:A", "blue", [] ],
+    [ "ultrasonic:ECHO", "uno:2", "green", [ "v0" ] ],
+    [ "ultrasonic:TRIG", "uno:3", "green", [ "v0" ] ],
+    [ "r1:2", "uno:4", "green", [ "h0" ] ],
+    [ "bz1:1", "uno:GND.1", "green", [ "v28.8", "h96" ] ],
+    [ "uno:GND.1", "sw1:1", "black", [ "v-38.4", "h-66.9" ] ],
+    [ "sw1:2", "uno:6", "green", [ "v28.8", "h86.5" ] ],
+    [ "sw1:3", "uno:5V", "green", [ "v278.4", "h29" ] ],
+    [ "bz1:2", "uno:5", "green", [ "v0", "h162.8" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,167 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (30) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  7 2023 22:37:23[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aa28h ( 43560) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001aa50 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cbb0 vaddr=40080000 size=03468h ( 13416) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1a03ch (106556) map[0m
+[0;32mI (173) esp_image: segment 4: paddr=0003a064 vaddr=40083468 size=09a80h ( 39552) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (207) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu up.[0m
+[0;32mI (208) cpu_start: Starting app cpu, entry point is 0x400811d8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (226) cpu_start: Pro cpu start user code[0m
+[0;32mI (226) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (226) cpu_start: Application information:[0m
+[0;32mI (230) cpu_start: Project name:     uart[0m
+[0;32mI (235) cpu_start: App version:      1[0m
+[0;32mI (240) cpu_start: Compile time:     Dec  7 2023 22:33:53[0m
+[0;32mI (246) cpu_start: ELF file SHA256:  5215916f813be132...[0m
+[0;32mI (252) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (257) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (262) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (267) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (291) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (297) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008CEE8 len 00013118 (76 KiB): IRAM[0m
+[0;32mI (311) spi_flash: detected chip: generic[0m
+[0;32mI (314) spi_flash: flash io: dio[0m
+[0;33mW (318) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (332) app_start: Starting scheduler on CPU0[0m
+[0;32mI (337) app_start: Starting scheduler on CPU1[0m
+[0;32mI (337) main_task: Started on CPU0[0m
+[0;32mI (347) main_task: Calling app_main()[0m
+[0;32mI (347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (347) main_task: Returned from app_main()[0m
+[0;32mI (2347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (4347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (6347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (8347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (10347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (12347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (14347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (16347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (18347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (20347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (22347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (24347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (26347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (28347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (30347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (32347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (34347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (36347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (38347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (40347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (42347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (44347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (46347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (48347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (50347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (52347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (54347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (56347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (58347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (60347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (62347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (64347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (66347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (68347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (70347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (72347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (74347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (76347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (78347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (80347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (82347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (84347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (86347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (88347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (90347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (92347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (94347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (96347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (98347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (100347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (102347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (104347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (106347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (108347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (110347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (112347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (114347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (116347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (118347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (120347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (122347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (124347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (126347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (128347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (130347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (132347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (134347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (136347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (138347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (140347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (142347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (144347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (146347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (148347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (150347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (152347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (154347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (156347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (158347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (160347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (162347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (164347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (166347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (168347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (170347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (172347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (174347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (176347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (178347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (180347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (182347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (184347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (186347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (188347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (190347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (192347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (194347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (196347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (198347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (200347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (202347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (204347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (206347) TX_TASK: Wrote 11 bytes[0m
+[0;32mI (208347) TX_TASK: Wrote 11 bytes[0m

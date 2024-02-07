@@ -1,0 +1,265 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  7 2023 22:37:23[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a808h ( 43016) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001a830 vaddr=3ffb0000 size=022d8h (  8920) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cb10 vaddr=40080000 size=03508h ( 13576) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16ac0h ( 92864) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=00036ae8 vaddr=40083508 size=099e0h ( 39392) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu up.[0m
+[0;32mI (203) cpu_start: Starting app cpu, entry point is 0x400811d8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (221) cpu_start: Pro cpu start user code[0m
+[0;32mI (221) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (221) cpu_start: Application information:[0m
+[0;32mI (225) cpu_start: Project name:     uart[0m
+[0;32mI (230) cpu_start: App version:      1[0m
+[0;32mI (235) cpu_start: Compile time:     Dec  8 2023 01:01:54[0m
+[0;32mI (241) cpu_start: ELF file SHA256:  b3cbd85e08fa6c4d...[0m
+[0;32mI (247) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (252) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (257) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (261) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (266) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (274) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (279) heap_init: At 3FFB2B48 len 0002D4B8 (181 KiB): DRAM[0m
+[0;32mI (286) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (292) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (299) heap_init: At 4008CEE8 len 00013118 (76 KiB): IRAM[0m
+[0;32mI (306) spi_flash: detected chip: generic[0m
+[0;32mI (309) spi_flash: flash io: dio[0m
+[0;33mW (313) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (332) app_start: Starting scheduler on CPU1[0m
+[0;32mI (332) main_task: Started on CPU0[0m
+[0;32mI (342) main_task: Calling app_main()[0m
+F.F(00)
+1.8.0(000052.337*kWh)
+2.8.0(00376.432*kWh)
+3.8.0(00145.875*kvarh)
+4.8.0(00010.724*kvarh)
+15.8.0(000428.769*kWh)
+32.7(231*V)
+52.7(230*V)
+72.7(230*V)
+31.7(00.000*A)
+51.7(00.000*A)
+71.7(00.000*A)
+13.7(-.--)
+14.7(50.0*Hz)
+C.1.0(40799390)
+0.0(40799390        )
+C.1.1(           )
+0.2.0(M29)
+16.7(000.00*kW)
+131.7(000.00*kVAr)
+C.5.0(6402)
+C.7.0(0064)
+!
+[0;32mI (372) main_task: Returned from app_main()[0m
+[0;32mI (8112) RX_TASK: Read 5 bytes:[0m
+[0;32mI (8112) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (8112) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (8112) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (8112) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (8112) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (8122) UART: Sent Identification Message[0m
+[0;32mI (18702) RX_TASK: Read 11 bytes:[0m
+[0;32mI (18702) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (18702) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (18702) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (18702) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (18702) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (18712) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (18712) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (18712) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (18722) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (18722) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (18732) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (18732) UART: Sent Response Data[0m
+[0;32mI (28972) RX_TASK: Read 5 bytes:[0m
+[0;32mI (28972) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (28972) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (28972) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (28972) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (28972) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (28982) UART: Sent Identification Message[0m
+[0;32mI (39532) RX_TASK: Read 11 bytes:[0m
+[0;32mI (39532) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (39532) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (39532) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (39532) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (39532) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (39542) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (39542) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (39542) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (39552) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (39552) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (39562) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (39562) UART: Sent Response Data[0m
+[0;32mI (49792) RX_TASK: Read 5 bytes:[0m
+[0;32mI (49792) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (49792) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (49792) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (49792) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (49792) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (49802) UART: Sent Identification Message[0m
+[0;32mI (60352) RX_TASK: Read 11 bytes:[0m
+[0;32mI (60352) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (60352) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (60352) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (60352) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (60352) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (60362) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (60362) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (60362) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (60372) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (60372) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (60382) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (60382) UART: Sent Response Data[0m
+[0;32mI (70622) RX_TASK: Read 5 bytes:[0m
+[0;32mI (70622) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (70622) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (70622) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (70622) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (70622) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (70632) UART: Sent Identification Message[0m
+[0;32mI (81212) RX_TASK: Read 11 bytes:[0m
+[0;32mI (81212) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (81212) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (81212) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (81212) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (81212) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (81222) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (81222) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (81222) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (81232) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (81232) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (81242) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (81242) UART: Sent Response Data[0m
+[0;32mI (91472) RX_TASK: Read 5 bytes:[0m
+[0;32mI (91472) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (91472) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (91472) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (91472) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (91472) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (91482) UART: Sent Identification Message[0m
+[0;32mI (102032) RX_TASK: Read 11 bytes:[0m
+[0;32mI (102032) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (102032) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (102032) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (102032) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (102032) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (102042) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (102042) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (102052) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (102052) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (102052) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (102062) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (102062) UART: Sent Response Data[0m
+[0;32mI (112302) RX_TASK: Read 5 bytes:[0m
+[0;32mI (112302) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (112302) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (112302) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (112302) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (112302) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (112312) UART: Sent Identification Message[0m
+[0;32mI (122862) RX_TASK: Read 11 bytes:[0m
+[0;32mI (122862) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (122862) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (122862) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (122862) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (122862) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (122872) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (122872) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (122882) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (122882) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (122882) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (122892) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (122892) UART: Sent Response Data[0m
+[0;32mI (133132) RX_TASK: Read 5 bytes:[0m
+[0;32mI (133132) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (133132) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (133132) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (133132) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (133132) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (133142) UART: Sent Identification Message[0m
+[0;32mI (143692) RX_TASK: Read 11 bytes:[0m
+[0;32mI (143692) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (143692) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (143692) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (143692) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (143692) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (143702) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (143702) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (143712) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (143712) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (143712) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (143722) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (143722) UART: Sent Response Data[0m
+[0;32mI (153952) RX_TASK: Read 5 bytes:[0m
+[0;32mI (153952) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (153952) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (153952) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (153952) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (153952) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (153962) UART: Sent Identification Message[0m
+[0;32mI (164542) RX_TASK: Read 11 bytes:[0m
+[0;32mI (164542) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (164542) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (164542) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (164542) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (164542) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (164552) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (164552) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (164562) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (164562) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (164562) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (164572) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (164572) UART: Sent Response Data[0m
+[0;32mI (174812) RX_TASK: Read 5 bytes:[0m
+[0;32mI (174812) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (174812) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (174812) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (174812) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (174812) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (174822) UART: Sent Identification Message[0m
+[0;32mI (185372) RX_TASK: Read 11 bytes:[0m
+[0;32mI (185372) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (185372) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (185372) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (185372) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (185372) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (185382) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (185382) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (185392) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (185392) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (185392) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (185402) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (185402) UART: Sent Response Data[0m

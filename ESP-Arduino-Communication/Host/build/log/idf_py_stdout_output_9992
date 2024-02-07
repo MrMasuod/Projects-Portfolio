@@ -1,0 +1,858 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  7 2023 22:37:23[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a790h ( 42896) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001a7b8 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001c918 vaddr=40080000 size=03700h ( 14080) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=168ach ( 92332) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=000368d4 vaddr=40083700 size=097e8h ( 38888) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (202) cpu_start: Pro cpu up.[0m
+[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x400811d8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) cpu_start: Application information:[0m
+[0;32mI (225) cpu_start: Project name:     uart[0m
+[0;32mI (230) cpu_start: App version:      1[0m
+[0;32mI (234) cpu_start: Compile time:     Dec  8 2023 01:01:54[0m
+[0;32mI (240) cpu_start: ELF file SHA256:  35a8a3465a51f788...[0m
+[0;32mI (246) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (252) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (256) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (261) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (266) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (279) heap_init: At 3FFB29C8 len 0002D638 (181 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (292) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 4008CEE8 len 00013118 (76 KiB): IRAM[0m
+[0;32mI (306) spi_flash: detected chip: generic[0m
+[0;32mI (309) spi_flash: flash io: dio[0m
+[0;33mW (313) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (331) app_start: Starting scheduler on CPU1[0m
+[0;32mI (331) main_task: Started on CPU0[0m
+[0;32mI (341) main_task: Calling app_main()[0m
+[0;32mI (341) main_task: Returned from app_main()[0m
+[0;32mI (3601) RX_TASK: Read 5 bytes:[0m
+[0;32mI (3601) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (3601) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (3601) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (3601) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (3601) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (3611) MATCH: Match success![0m
+[0;32mI (13601) RX_TASK: Read 5 bytes:[0m
+[0;32mI (13601) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (13601) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (13601) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (13601) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (13601) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (13611) MATCH: Match success![0m
+[0;32mI (23601) RX_TASK: Read 5 bytes:[0m
+[0;32mI (23601) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (23601) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (23601) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (23601) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (23601) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (23611) MATCH: Match success![0m
+[0;32mI (33601) RX_TASK: Read 5 bytes:[0m
+[0;32mI (33601) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (33601) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (33601) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (33601) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (33601) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (33611) MATCH: Match success![0m
+[0;32mI (43611) RX_TASK: Read 5 bytes:[0m
+[0;32mI (43611) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (43611) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (43611) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (43611) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (43611) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (43621) MATCH: Match success![0m
+[0;32mI (53611) RX_TASK: Read 5 bytes:[0m
+[0;32mI (53611) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (53611) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (53611) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (53611) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (53611) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (53621) MATCH: Match success![0m
+[0;32mI (63611) RX_TASK: Read 5 bytes:[0m
+[0;32mI (63611) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (63611) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (63611) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (63611) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (63611) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (63621) MATCH: Match success![0m
+[0;32mI (73611) RX_TASK: Read 5 bytes:[0m
+[0;32mI (73611) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (73611) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (73611) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (73611) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (73611) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (73621) MATCH: Match success![0m
+[0;32mI (83611) RX_TASK: Read 5 bytes:[0m
+[0;32mI (83611) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (83611) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (83611) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (83611) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (83611) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (83621) MATCH: Match success![0m
+[0;32mI (93611) RX_TASK: Read 5 bytes:[0m
+[0;32mI (93611) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (93611) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (93611) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (93611) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (93611) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (93621) MATCH: Match success![0m
+[0;32mI (101171) RX_TASK: Read 19 bytes:[0m
+[0;32mI (101171) RX_TASK: Byte 0: 0xFF[0m
+[0;32mI (101171) RX_TASK: Byte 1: 0xFF[0m
+[0;32mI (101171) RX_TASK: Byte 2: 0xFC[0m
+[0;32mI (101171) RX_TASK: Byte 3: 0xFC[0m
+[0;32mI (101171) RX_TASK: Byte 4: 0xFC[0m
+[0;32mI (101181) RX_TASK: Byte 5: 0xFE[0m
+[0;32mI (101181) RX_TASK: Byte 6: 0x48[0m
+[0;32mI (101191) RX_TASK: Byte 7: 0xAD[0m
+[0;32mI (101191) RX_TASK: Byte 8: 0xFE[0m
+[0;32mI (101191) RX_TASK: Byte 9: 0xFE[0m
+[0;32mI (101201) RX_TASK: Byte 10: 0xFC[0m
+[0;32mI (101201) RX_TASK: Byte 11: 0xFC[0m
+[0;32mI (101211) RX_TASK: Byte 12: 0xFC[0m
+[0;32mI (101211) RX_TASK: Byte 13: 0xFF[0m
+[0;32mI (101211) RX_TASK: Byte 14: 0xFF[0m
+[0;32mI (101221) RX_TASK: Byte 15: 0xFC[0m
+[0;32mI (101221) RX_TASK: Byte 16: 0xFC[0m
+[0;32mI (101231) RX_TASK: Byte 17: 0xFC[0m
+[0;32mI (101231) RX_TASK: Byte 18: 0xFC[0m
+[0;32mI (102561) RX_TASK: Read 120 bytes:[0m
+[0;32mI (102561) RX_TASK: Byte 0: 0xFC[0m
+[0;32mI (102561) RX_TASK: Byte 1: 0xFC[0m
+[0;32mI (102561) RX_TASK: Byte 2: 0xFF[0m
+[0;32mI (102561) RX_TASK: Byte 3: 0xFF[0m
+[0;32mI (102561) RX_TASK: Byte 4: 0xFF[0m
+[0;32mI (102571) RX_TASK: Byte 5: 0xFC[0m
+[0;32mI (102571) RX_TASK: Byte 6: 0xFC[0m
+[0;32mI (102581) RX_TASK: Byte 7: 0xFF[0m
+[0;32mI (102581) RX_TASK: Byte 8: 0xFC[0m
+[0;32mI (102581) RX_TASK: Byte 9: 0xFC[0m
+[0;32mI (102591) RX_TASK: Byte 10: 0xFF[0m
+[0;32mI (102591) RX_TASK: Byte 11: 0xFF[0m
+[0;32mI (102601) RX_TASK: Byte 12: 0xFF[0m
+[0;32mI (102601) RX_TASK: Byte 13: 0xFC[0m
+[0;32mI (102601) RX_TASK: Byte 14: 0xFC[0m
+[0;32mI (102611) RX_TASK: Byte 15: 0xFF[0m
+[0;32mI (102611) RX_TASK: Byte 16: 0xFF[0m
+[0;32mI (102621) RX_TASK: Byte 17: 0xFF[0m
+[0;32mI (102621) RX_TASK: Byte 18: 0xFC[0m
+[0;32mI (102621) RX_TASK: Byte 19: 0xFC[0m
+[0;32mI (102631) RX_TASK: Byte 20: 0xFF[0m
+[0;32mI (102631) RX_TASK: Byte 21: 0xFF[0m
+[0;32mI (102641) RX_TASK: Byte 22: 0xFF[0m
+[0;32mI (102641) RX_TASK: Byte 23: 0xFC[0m
+[0;32mI (102641) RX_TASK: Byte 24: 0xFE[0m
+[0;32mI (102651) RX_TASK: Byte 25: 0xFF[0m
+[0;32mI (102651) RX_TASK: Byte 26: 0xFF[0m
+[0;32mI (102661) RX_TASK: Byte 27: 0xFF[0m
+[0;32mI (102661) RX_TASK: Byte 28: 0xFC[0m
+[0;32mI (102661) RX_TASK: Byte 29: 0xFC[0m
+[0;32mI (102671) RX_TASK: Byte 30: 0xFF[0m
+[0;32mI (102671) RX_TASK: Byte 31: 0xFF[0m
+[0;32mI (102681) RX_TASK: Byte 32: 0xFC[0m
+[0;32mI (102681) RX_TASK: Byte 33: 0xFC[0m
+[0;32mI (102681) RX_TASK: Byte 34: 0xFF[0m
+[0;32mI (102691) RX_TASK: Byte 35: 0xFF[0m
+[0;32mI (102691) RX_TASK: Byte 36: 0xFC[0m
+[0;32mI (102701) RX_TASK: Byte 37: 0xFC[0m
+[0;32mI (102701) RX_TASK: Byte 38: 0xFF[0m
+[0;32mI (102701) RX_TASK: Byte 39: 0xFF[0m
+[0;32mI (102711) RX_TASK: Byte 40: 0xFE[0m
+[0;32mI (102711) RX_TASK: Byte 41: 0xFC[0m
+[0;32mI (102711) RX_TASK: Byte 42: 0xFF[0m
+[0;32mI (102721) RX_TASK: Byte 43: 0xFF[0m
+[0;32mI (102721) RX_TASK: Byte 44: 0xFC[0m
+[0;32mI (102731) RX_TASK: Byte 45: 0xFC[0m
+[0;32mI (102731) RX_TASK: Byte 46: 0xFF[0m
+[0;32mI (102731) RX_TASK: Byte 47: 0xFF[0m
+[0;32mI (102741) RX_TASK: Byte 48: 0xFC[0m
+[0;32mI (102741) RX_TASK: Byte 49: 0xFC[0m
+[0;32mI (102751) RX_TASK: Byte 50: 0xFF[0m
+[0;32mI (102751) RX_TASK: Byte 51: 0xFF[0m
+[0;32mI (102751) RX_TASK: Byte 52: 0xFC[0m
+[0;32mI (102761) RX_TASK: Byte 53: 0xFE[0m
+[0;32mI (102761) RX_TASK: Byte 54: 0xFF[0m
+[0;32mI (102771) RX_TASK: Byte 55: 0xFF[0m
+[0;32mI (102771) RX_TASK: Byte 56: 0xFF[0m
+[0;32mI (102771) RX_TASK: Byte 57: 0xFC[0m
+[0;32mI (102781) RX_TASK: Byte 58: 0xFC[0m
+[0;32mI (102781) RX_TASK: Byte 59: 0xFF[0m
+[0;32mI (102791) RX_TASK: Byte 60: 0xFF[0m
+[0;32mI (102791) RX_TASK: Byte 61: 0xFC[0m
+[0;32mI (102791) RX_TASK: Byte 62: 0xFC[0m
+[0;32mI (102801) RX_TASK: Byte 63: 0xFF[0m
+[0;32mI (102801) RX_TASK: Byte 64: 0xFC[0m
+[0;32mI (102811) RX_TASK: Byte 65: 0xFC[0m
+[0;32mI (102811) RX_TASK: Byte 66: 0xFF[0m
+[0;32mI (102811) RX_TASK: Byte 67: 0xFF[0m
+[0;32mI (102821) RX_TASK: Byte 68: 0xFF[0m
+[0;32mI (102821) RX_TASK: Byte 69: 0xFC[0m
+[0;32mI (102831) RX_TASK: Byte 70: 0xFC[0m
+[0;32mI (102831) RX_TASK: Byte 71: 0xFF[0m
+[0;32mI (102831) RX_TASK: Byte 72: 0xFC[0m
+[0;32mI (102841) RX_TASK: Byte 73: 0xFC[0m
+[0;32mI (102841) RX_TASK: Byte 74: 0xFF[0m
+[0;32mI (102851) RX_TASK: Byte 75: 0xFF[0m
+[0;32mI (102851) RX_TASK: Byte 76: 0xFC[0m
+[0;32mI (102851) RX_TASK: Byte 77: 0xFC[0m
+[0;32mI (102861) RX_TASK: Byte 78: 0xFF[0m
+[0;32mI (102861) RX_TASK: Byte 79: 0xFC[0m
+[0;32mI (102871) RX_TASK: Byte 80: 0xFC[0m
+[0;32mI (102871) RX_TASK: Byte 81: 0xFF[0m
+[0;32mI (102871) RX_TASK: Byte 82: 0xFF[0m
+[0;32mI (102881) RX_TASK: Byte 83: 0xFF[0m
+[0;32mI (102881) RX_TASK: Byte 84: 0xFC[0m
+[0;32mI (102891) RX_TASK: Byte 85: 0xFC[0m
+[0;32mI (102891) RX_TASK: Byte 86: 0xFF[0m
+[0;32mI (102891) RX_TASK: Byte 87: 0xFF[0m
+[0;32mI (102901) RX_TASK: Byte 88: 0xFF[0m
+[0;32mI (102901) RX_TASK: Byte 89: 0xFC[0m
+[0;32mI (102911) RX_TASK: Byte 90: 0xFC[0m
+[0;32mI (102911) RX_TASK: Byte 91: 0xFF[0m
+[0;32mI (102911) RX_TASK: Byte 92: 0xFF[0m
+[0;32mI (102921) RX_TASK: Byte 93: 0xFC[0m
+[0;32mI (102921) RX_TASK: Byte 94: 0xFC[0m
+[0;32mI (102931) RX_TASK: Byte 95: 0xFF[0m
+[0;32mI (102931) RX_TASK: Byte 96: 0xFF[0m
+[0;32mI (102931) RX_TASK: Byte 97: 0xFC[0m
+[0;32mI (102941) RX_TASK: Byte 98: 0xFC[0m
+[0;32mI (102941) RX_TASK: Byte 99: 0xFF[0m
+[0;32mI (102951) RX_TASK: Byte 100: 0xFF[0m
+[0;32mI (102951) RX_TASK: Byte 101: 0xFC[0m
+[0;32mI (102951) RX_TASK: Byte 102: 0xFC[0m
+[0;32mI (102961) RX_TASK: Byte 103: 0xFF[0m
+[0;32mI (102961) RX_TASK: Byte 104: 0xFF[0m
+[0;32mI (102971) RX_TASK: Byte 105: 0xFC[0m
+[0;32mI (102971) RX_TASK: Byte 106: 0xFC[0m
+[0;32mI (102981) RX_TASK: Byte 107: 0xFF[0m
+[0;32mI (102981) RX_TASK: Byte 108: 0xFF[0m
+[0;32mI (102981) RX_TASK: Byte 109: 0xFF[0m
+[0;32mI (102991) RX_TASK: Byte 110: 0xFC[0m
+[0;32mI (102991) RX_TASK: Byte 111: 0xFC[0m
+[0;32mI (103001) RX_TASK: Byte 112: 0xFF[0m
+[0;32mI (103001) RX_TASK: Byte 113: 0xFF[0m
+[0;32mI (103001) RX_TASK: Byte 114: 0xFF[0m
+[0;32mI (103011) RX_TASK: Byte 115: 0xFE[0m
+[0;32mI (103011) RX_TASK: Byte 116: 0xFC[0m
+[0;32mI (103021) RX_TASK: Byte 117: 0xFF[0m
+[0;32mI (103021) RX_TASK: Byte 118: 0xFF[0m
+[0;32mI (103021) RX_TASK: Byte 119: 0xFC[0m
+[0;32mI (104551) RX_TASK: Read 178 bytes:[0m
+[0;32mI (104551) RX_TASK: Byte 0: 0xFC[0m
+[0;32mI (104551) RX_TASK: Byte 1: 0xFF[0m
+[0;32mI (104551) RX_TASK: Byte 2: 0xFF[0m
+[0;32mI (104551) RX_TASK: Byte 3: 0xFC[0m
+[0;32mI (104551) RX_TASK: Byte 4: 0xFC[0m
+[0;32mI (104561) RX_TASK: Byte 5: 0xFF[0m
+[0;32mI (104561) RX_TASK: Byte 6: 0xFF[0m
+[0;32mI (104571) RX_TASK: Byte 7: 0xFC[0m
+[0;32mI (104571) RX_TASK: Byte 8: 0xFC[0m
+[0;32mI (104571) RX_TASK: Byte 9: 0xFF[0m
+[0;32mI (104581) RX_TASK: Byte 10: 0xFF[0m
+[0;32mI (104581) RX_TASK: Byte 11: 0xFC[0m
+[0;32mI (104591) RX_TASK: Byte 12: 0xFE[0m
+[0;32mI (104591) RX_TASK: Byte 13: 0xFF[0m
+[0;32mI (104591) RX_TASK: Byte 14: 0xFF[0m
+[0;32mI (104601) RX_TASK: Byte 15: 0xFC[0m
+[0;32mI (104601) RX_TASK: Byte 16: 0xFC[0m
+[0;32mI (104611) RX_TASK: Byte 17: 0xFF[0m
+[0;32mI (104611) RX_TASK: Byte 18: 0xFF[0m
+[0;32mI (104611) RX_TASK: Byte 19: 0xFC[0m
+[0;32mI (104621) RX_TASK: Byte 20: 0xFC[0m
+[0;32mI (104621) RX_TASK: Byte 21: 0x7F[0m
+[0;32mI (104631) RX_TASK: Byte 22: 0xFC[0m
+[0;32mI (104631) RX_TASK: Byte 23: 0xFC[0m
+[0;32mI (104631) RX_TASK: Byte 24: 0xFF[0m
+[0;32mI (104641) RX_TASK: Byte 25: 0xFF[0m
+[0;32mI (104641) RX_TASK: Byte 26: 0xFE[0m
+[0;32mI (104651) RX_TASK: Byte 27: 0xFC[0m
+[0;32mI (104651) RX_TASK: Byte 28: 0xFF[0m
+[0;32mI (104651) RX_TASK: Byte 29: 0xFF[0m
+[0;32mI (104661) RX_TASK: Byte 30: 0xFF[0m
+[0;32mI (104661) RX_TASK: Byte 31: 0xFC[0m
+[0;32mI (104671) RX_TASK: Byte 32: 0xFC[0m
+[0;32mI (104671) RX_TASK: Byte 33: 0xFF[0m
+[0;32mI (104671) RX_TASK: Byte 34: 0xFC[0m
+[0;32mI (104681) RX_TASK: Byte 35: 0xFC[0m
+[0;32mI (104681) RX_TASK: Byte 36: 0xFF[0m
+[0;32mI (104691) RX_TASK: Byte 37: 0xFF[0m
+[0;32mI (104691) RX_TASK: Byte 38: 0xFF[0m
+[0;32mI (104691) RX_TASK: Byte 39: 0xFC[0m
+[0;32mI (104701) RX_TASK: Byte 40: 0xFC[0m
+[0;32mI (104701) RX_TASK: Byte 41: 0xFF[0m
+[0;32mI (104701) RX_TASK: Byte 42: 0xFF[0m
+[0;32mI (104711) RX_TASK: Byte 43: 0xFF[0m
+[0;32mI (104711) RX_TASK: Byte 44: 0xFC[0m
+[0;32mI (104721) RX_TASK: Byte 45: 0xFC[0m
+[0;32mI (104721) RX_TASK: Byte 46: 0xFF[0m
+[0;32mI (104721) RX_TASK: Byte 47: 0xFF[0m
+[0;32mI (104731) RX_TASK: Byte 48: 0xFF[0m
+[0;32mI (104731) RX_TASK: Byte 49: 0xFC[0m
+[0;32mI (104741) RX_TASK: Byte 50: 0xFC[0m
+[0;32mI (104741) RX_TASK: Byte 51: 0xFF[0m
+[0;32mI (104741) RX_TASK: Byte 52: 0xFF[0m
+[0;32mI (104751) RX_TASK: Byte 53: 0xFF[0m
+[0;32mI (104751) RX_TASK: Byte 54: 0xFC[0m
+[0;32mI (104761) RX_TASK: Byte 55: 0xFC[0m
+[0;32mI (104761) RX_TASK: Byte 56: 0xFF[0m
+[0;32mI (104761) RX_TASK: Byte 57: 0xFF[0m
+[0;32mI (104771) RX_TASK: Byte 58: 0xFC[0m
+[0;32mI (104771) RX_TASK: Byte 59: 0xFC[0m
+[0;32mI (104781) RX_TASK: Byte 60: 0xFF[0m
+[0;32mI (104781) RX_TASK: Byte 61: 0xFC[0m
+[0;32mI (104781) RX_TASK: Byte 62: 0xFC[0m
+[0;32mI (104791) RX_TASK: Byte 63: 0xFF[0m
+[0;32mI (104791) RX_TASK: Byte 64: 0xFF[0m
+[0;32mI (104801) RX_TASK: Byte 65: 0xFF[0m
+[0;32mI (104801) RX_TASK: Byte 66: 0xFC[0m
+[0;32mI (104801) RX_TASK: Byte 67: 0xFC[0m
+[0;32mI (104811) RX_TASK: Byte 68: 0xFF[0m
+[0;32mI (104811) RX_TASK: Byte 69: 0xFF[0m
+[0;32mI (104821) RX_TASK: Byte 70: 0xFF[0m
+[0;32mI (104821) RX_TASK: Byte 71: 0xFC[0m
+[0;32mI (104821) RX_TASK: Byte 72: 0xFC[0m
+[0;32mI (104831) RX_TASK: Byte 73: 0xFF[0m
+[0;32mI (104831) RX_TASK: Byte 74: 0xFF[0m
+[0;32mI (104841) RX_TASK: Byte 75: 0xFC[0m
+[0;32mI (104841) RX_TASK: Byte 76: 0xFC[0m
+[0;32mI (104841) RX_TASK: Byte 77: 0xFF[0m
+[0;32mI (104851) RX_TASK: Byte 78: 0xFF[0m
+[0;32mI (104851) RX_TASK: Byte 79: 0xFC[0m
+[0;32mI (104861) RX_TASK: Byte 80: 0xFC[0m
+[0;32mI (104861) RX_TASK: Byte 81: 0xFF[0m
+[0;32mI (104861) RX_TASK: Byte 82: 0xFC[0m
+[0;32mI (104871) RX_TASK: Byte 83: 0xFE[0m
+[0;32mI (104871) RX_TASK: Byte 84: 0xFF[0m
+[0;32mI (104881) RX_TASK: Byte 85: 0xFF[0m
+[0;32mI (104881) RX_TASK: Byte 86: 0xFC[0m
+[0;32mI (104881) RX_TASK: Byte 87: 0xFC[0m
+[0;32mI (104891) RX_TASK: Byte 88: 0xFF[0m
+[0;32mI (104891) RX_TASK: Byte 89: 0xFF[0m
+[0;32mI (104901) RX_TASK: Byte 90: 0xFC[0m
+[0;32mI (104901) RX_TASK: Byte 91: 0xFC[0m
+[0;32mI (104901) RX_TASK: Byte 92: 0xFF[0m
+[0;32mI (104911) RX_TASK: Byte 93: 0x7F[0m
+[0;32mI (104911) RX_TASK: Byte 94: 0xFC[0m
+[0;32mI (104921) RX_TASK: Byte 95: 0xFC[0m
+[0;32mI (104921) RX_TASK: Byte 96: 0xFF[0m
+[0;32mI (104921) RX_TASK: Byte 97: 0xFF[0m
+[0;32mI (104931) RX_TASK: Byte 98: 0xFF[0m
+[0;32mI (104931) RX_TASK: Byte 99: 0xFC[0m
+[0;32mI (104941) RX_TASK: Byte 100: 0xFC[0m
+[0;32mI (104941) RX_TASK: Byte 101: 0xFF[0m
+[0;32mI (104941) RX_TASK: Byte 102: 0xFF[0m
+[0;32mI (104951) RX_TASK: Byte 103: 0xFF[0m
+[0;32mI (104951) RX_TASK: Byte 104: 0xFC[0m
+[0;32mI (104961) RX_TASK: Byte 105: 0xFC[0m
+[0;32mI (104961) RX_TASK: Byte 106: 0xFF[0m
+[0;32mI (104971) RX_TASK: Byte 107: 0xBF[0m
+[0;32mI (104971) RX_TASK: Byte 108: 0xFC[0m
+[0;32mI (104971) RX_TASK: Byte 109: 0xFC[0m
+[0;32mI (104981) RX_TASK: Byte 110: 0xFF[0m
+[0;32mI (104981) RX_TASK: Byte 111: 0xFF[0m
+[0;32mI (104991) RX_TASK: Byte 112: 0xFC[0m
+[0;32mI (104991) RX_TASK: Byte 113: 0xFC[0m
+[0;32mI (104991) RX_TASK: Byte 114: 0xFF[0m
+[0;32mI (105001) RX_TASK: Byte 115: 0xFE[0m
+[0;32mI (105001) RX_TASK: Byte 116: 0xFC[0m
+[0;32mI (105011) RX_TASK: Byte 117: 0xFF[0m
+[0;32mI (105011) RX_TASK: Byte 118: 0xEF[0m
+[0;32mI (105011) RX_TASK: Byte 119: 0xFC[0m
+[0;32mI (105021) RX_TASK: Byte 120: 0xFE[0m
+[0;32mI (105021) RX_TASK: Byte 121: 0xFF[0m
+[0;32mI (105031) RX_TASK: Byte 122: 0xFF[0m
+[0;32mI (105031) RX_TASK: Byte 123: 0xFC[0m
+[0;32mI (105031) RX_TASK: Byte 124: 0xFC[0m
+[0;32mI (105041) RX_TASK: Byte 125: 0xFF[0m
+[0;32mI (105041) RX_TASK: Byte 126: 0xFF[0m
+[0;32mI (105051) RX_TASK: Byte 127: 0xFF[0m
+[0;32mI (105051) RX_TASK: Byte 128: 0xFC[0m
+[0;32mI (105051) RX_TASK: Byte 129: 0xFC[0m
+[0;32mI (105061) RX_TASK: Byte 130: 0xFF[0m
+[0;32mI (105061) RX_TASK: Byte 131: 0xFF[0m
+[0;32mI (105071) RX_TASK: Byte 132: 0xFC[0m
+[0;32mI (105071) RX_TASK: Byte 133: 0xFC[0m
+[0;32mI (105081) RX_TASK: Byte 134: 0xFF[0m
+[0;32mI (105081) RX_TASK: Byte 135: 0xFF[0m
+[0;32mI (105081) RX_TASK: Byte 136: 0xFF[0m
+[0;32mI (105091) RX_TASK: Byte 137: 0xFC[0m
+[0;32mI (105091) RX_TASK: Byte 138: 0xFC[0m
+[0;32mI (105101) RX_TASK: Byte 139: 0xFF[0m
+[0;32mI (105101) RX_TASK: Byte 140: 0xFF[0m
+[0;32mI (105101) RX_TASK: Byte 141: 0xFF[0m
+[0;32mI (105111) RX_TASK: Byte 142: 0xFC[0m
+[0;32mI (105111) RX_TASK: Byte 143: 0xFC[0m
+[0;32mI (105121) RX_TASK: Byte 144: 0xFF[0m
+[0;32mI (105121) RX_TASK: Byte 145: 0xFF[0m
+[0;32mI (105121) RX_TASK: Byte 146: 0xFC[0m
+[0;32mI (105131) RX_TASK: Byte 147: 0xFC[0m
+[0;32mI (105131) RX_TASK: Byte 148: 0xFF[0m
+[0;32mI (105141) RX_TASK: Byte 149: 0xFF[0m
+[0;32mI (105141) RX_TASK: Byte 150: 0xFF[0m
+[0;32mI (105141) RX_TASK: Byte 151: 0xFC[0m
+[0;32mI (105151) RX_TASK: Byte 152: 0xFC[0m
+[0;32mI (105151) RX_TASK: Byte 153: 0xFF[0m
+[0;32mI (105161) RX_TASK: Byte 154: 0xFF[0m
+[0;32mI (105161) RX_TASK: Byte 155: 0xFC[0m
+[0;32mI (105171) RX_TASK: Byte 156: 0xFC[0m
+[0;32mI (105171) RX_TASK: Byte 157: 0xFF[0m
+[0;32mI (105171) RX_TASK: Byte 158: 0xFF[0m
+[0;32mI (105181) RX_TASK: Byte 159: 0xFC[0m
+[0;32mI (105181) RX_TASK: Byte 160: 0xFC[0m
+[0;32mI (105191) RX_TASK: Byte 161: 0xFC[0m
+[0;32mI (105191) RX_TASK: Byte 162: 0xFC[0m
+[0;32mI (105191) RX_TASK: Byte 163: 0xFC[0m
+[0;32mI (105201) RX_TASK: Byte 164: 0xFC[0m
+[0;32mI (105201) RX_TASK: Byte 165: 0xFC[0m
+[0;32mI (105211) RX_TASK: Byte 166: 0xFC[0m
+[0;32mI (105211) RX_TASK: Byte 167: 0xFC[0m
+[0;32mI (105211) RX_TASK: Byte 168: 0xFC[0m
+[0;32mI (105221) RX_TASK: Byte 169: 0xFC[0m
+[0;32mI (105221) RX_TASK: Byte 170: 0xFC[0m
+[0;32mI (105231) RX_TASK: Byte 171: 0xFC[0m
+[0;32mI (105231) RX_TASK: Byte 172: 0xFC[0m
+[0;32mI (105231) RX_TASK: Byte 173: 0x2F[0m
+[0;32mI (105241) RX_TASK: Byte 174: 0x3F[0m
+[0;32mI (105241) RX_TASK: Byte 175: 0x21[0m
+[0;32mI (105251) RX_TASK: Byte 176: 0x0D[0m
+[0;32mI (105251) RX_TASK: Byte 177: 0x0A[0m
+[0;32mI (106251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (106251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (106251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (106251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (106251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (106251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (106261) MATCH: Match success![0m
+[0;32mI (116251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (116251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (116251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (116251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (116251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (116251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (116261) MATCH: Match success![0m
+[0;32mI (126251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (126251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (126251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (126251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (126251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (126251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (126261) MATCH: Match success![0m
+[0;32mI (136251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (136251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (136251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (136251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (136251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (136251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (136261) MATCH: Match success![0m
+[0;32mI (146251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (146251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (146251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (146251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (146251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (146251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (146261) MATCH: Match success![0m
+[0;32mI (156251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (156251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (156251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (156251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (156251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (156251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (156261) MATCH: Match success![0m
+[0;32mI (166251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (166251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (166251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (166251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (166251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (166251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (166261) MATCH: Match success![0m
+[0;32mI (176251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (176251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (176251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (176251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (176251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (176251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (176261) MATCH: Match success![0m
+[0;32mI (186251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (186251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (186251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (186251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (186251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (186251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (186261) MATCH: Match success![0m
+[0;32mI (196251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (196251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (196251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (196251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (196251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (196251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (196261) MATCH: Match success![0m
+[0;32mI (206251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (206251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (206251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (206251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (206251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (206251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (206261) MATCH: Match success![0m
+[0;32mI (216251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (216251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (216251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (216251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (216251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (216251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (216261) MATCH: Match success![0m
+[0;32mI (226251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (226251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (226251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (226251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (226251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (226251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (226261) MATCH: Match success![0m
+[0;32mI (236251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (236251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (236251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (236251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (236251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (236251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (236261) MATCH: Match success![0m
+[0;32mI (246251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (246251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (246251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (246251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (246251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (246251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (246261) MATCH: Match success![0m
+[0;32mI (256251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (256251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (256251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (256251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (256251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (256251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (256261) MATCH: Match success![0m
+[0;32mI (266251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (266251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (266251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (266251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (266251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (266251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (266261) MATCH: Match success![0m
+[0;32mI (276251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (276251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (276251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (276251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (276251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (276251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (276261) MATCH: Match success![0m
+[0;32mI (286251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (286251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (286251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (286251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (286251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (286251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (286261) MATCH: Match success![0m
+[0;32mI (296251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (296251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (296251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (296251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (296251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (296251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (296261) MATCH: Match success![0m
+[0;32mI (306251) RX_TASK: Read 5 bytes:[0m
+[0;32mI (306251) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (306251) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (306251) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (306251) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (306251) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (306261) MATCH: Match success![0m
+[0;32mI (316261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (316261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (316261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (316261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (316261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (316261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (316271) MATCH: Match success![0m
+[0;32mI (326261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (326261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (326261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (326261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (326261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (326261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (326271) MATCH: Match success![0m
+[0;32mI (336261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (336261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (336261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (336261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (336261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (336261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (336271) MATCH: Match success![0m
+[0;32mI (346261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (346261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (346261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (346261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (346261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (346261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (346271) MATCH: Match success![0m
+[0;32mI (356261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (356261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (356261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (356261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (356261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (356261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (356271) MATCH: Match success![0m
+[0;32mI (366261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (366261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (366261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (366261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (366261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (366261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (366271) MATCH: Match success![0m
+[0;32mI (376261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (376261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (376261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (376261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (376261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (376261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (376271) MATCH: Match success![0m
+[0;32mI (386261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (386261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (386261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (386261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (386261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (386261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (386271) MATCH: Match success![0m
+[0;32mI (396261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (396261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (396261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (396261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (396261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (396261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (396271) MATCH: Match success![0m
+[0;32mI (406261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (406261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (406261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (406261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (406261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (406261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (406271) MATCH: Match success![0m
+[0;32mI (416261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (416261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (416261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (416261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (416261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (416261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (416271) MATCH: Match success![0m
+[0;32mI (426261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (426261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (426261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (426261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (426261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (426261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (426271) MATCH: Match success![0m
+[0;32mI (436261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (436261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (436261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (436261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (436261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (436261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (436271) MATCH: Match success![0m
+[0;32mI (446261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (446261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (446261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (446261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (446261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (446261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (446271) MATCH: Match success![0m
+[0;32mI (456261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (456261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (456261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (456261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (456261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (456261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (456271) MATCH: Match success![0m
+[0;32mI (466261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (466261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (466261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (466261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (466261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (466261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (466271) MATCH: Match success![0m
+[0;32mI (476261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (476261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (476261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (476261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (476261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (476261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (476271) MATCH: Match success![0m
+[0;32mI (486261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (486261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (486261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (486261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (486261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (486261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (486271) MATCH: Match success![0m
+[0;32mI (496261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (496261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (496261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (496261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (496261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (496261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (496271) MATCH: Match success![0m
+[0;32mI (506261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (506261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (506261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (506261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (506261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (506261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (506271) MATCH: Match success![0m
+[0;32mI (516261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (516261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (516261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (516261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (516261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (516261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (516271) MATCH: Match success![0m
+[0;32mI (526271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (526271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (526271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (526271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (526271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (526271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (526281) MATCH: Match success![0m
+[0;32mI (536271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (536271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (536271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (536271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (536271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (536271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (536281) MATCH: Match success![0m
+[0;32mI (546271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (546271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (546271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (546271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (546271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (546271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (546281) MATCH: Match success![0m
+[0;32mI (556271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (556271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (556271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (556271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (556271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (556271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (556281) MATCH: Match success![0m
+[0;32mI (566271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (566271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (566271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (566271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (566271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (566271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (566281) MATCH: Match success![0m
+[0;32mI (576271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (576271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (576271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (576271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (576271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (576271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (576281) MATCH: Match success![0m
+[0;32mI (586271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (586271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (586271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (586271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (586271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (586271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (586281) MATCH: Match success![0m
+[0;32mI (596271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (596271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (596271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (596271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (596271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (596271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (596281) MATCH: Match success![0m
+[0;32mI (606271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (606271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (606271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (606271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (606271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (606271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (606281) MATCH: Match success![0m
+[0;32mI (616271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (616271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (616271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (616271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (616271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (616271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (616281) MATCH: Match success![0m
+[0;32mI (626271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (626271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (626271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (626271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (626271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (626271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (626281) MATCH: Match success![0m
+[0;32mI (636271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (636271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (636271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (636271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (636271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (636271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (636281) MATCH: Match success![0m
+[0;32mI (646271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (646271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (646271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (646271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (646271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (646271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (646281) MATCH: Match success![0m
+[0;32mI (656271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (656271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (656271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (656271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (656271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (656271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (656281) MATCH: Match success![0m
+[0;32mI (666271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (666271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (666271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (666271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (666271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (666271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (666281) MATCH: Match success![0m
+[0;32mI (676271) RX_TASK: Read 5 bytes:[0m
+[0;32mI (676271) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (676271) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (676271) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (676271) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (676271) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (676281) MATCH: Match success![0m

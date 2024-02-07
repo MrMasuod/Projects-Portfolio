@@ -1,0 +1,585 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  7 2023 22:37:23[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a800h ( 43008) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001a828 vaddr=3ffb0000 size=022d8h (  8920) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cb08 vaddr=40080000 size=03510h ( 13584) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16abch ( 92860) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=00036ae4 vaddr=40083510 size=099d8h ( 39384) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu up.[0m
+[0;32mI (203) cpu_start: Starting app cpu, entry point is 0x400811d8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (221) cpu_start: Pro cpu start user code[0m
+[0;32mI (221) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (221) cpu_start: Application information:[0m
+[0;32mI (225) cpu_start: Project name:     uart[0m
+[0;32mI (230) cpu_start: App version:      1[0m
+[0;32mI (234) cpu_start: Compile time:     Dec  8 2023 01:01:54[0m
+[0;32mI (241) cpu_start: ELF file SHA256:  afb39b01df65abbf...[0m
+[0;32mI (247) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (252) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (257) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (261) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (266) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (274) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (279) heap_init: At 3FFB2B48 len 0002D4B8 (181 KiB): DRAM[0m
+[0;32mI (286) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (292) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 4008CEE8 len 00013118 (76 KiB): IRAM[0m
+[0;32mI (306) spi_flash: detected chip: generic[0m
+[0;32mI (309) spi_flash: flash io: dio[0m
+[0;33mW (313) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (331) app_start: Starting scheduler on CPU1[0m
+[0;32mI (331) main_task: Started on CPU0[0m
+[0;32mI (341) main_task: Calling app_main()[0m
+F.F(00)
+1.8.0(000052.337*kWh)
+2.8.0(00376.432*kWh)
+3.8.0(00145.875*kvarh)
+4.8.0(00010.724*kvarh)
+15.8.0(000428.769*kWh)
+32.7(231*V)
+52.7(230*V)
+72.7(230*V)
+31.7(00.000*A)
+51.7(00.000*A)
+71.7(00.000*A)
+13.7(-.--)
+14.7(50.0*Hz)
+C.1.0(40799390)
+0.0(40799390        )
+C.1.1(           )
+0.2.0(M29)
+16.7(000.00*kW)
+131.7(000.00*kVAr)
+C.5.0(6402)
+C.7.0(0064)
+!
+[0;32mI (371) main_task: Returned from app_main()[0m
+[0;32mI (11631) RX_TASK: Read 5 bytes:[0m
+[0;32mI (11631) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (11631) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (11631) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (11631) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (11631) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (11641) UART: Sent Identification Message[0m
+[0;32mI (22651) RX_TASK: Read 11 bytes:[0m
+[0;32mI (22651) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (22651) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (22651) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (22651) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (22651) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (22661) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (22661) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (22661) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (22671) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (22671) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (22681) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (32651) RX_TASK: Read 5 bytes:[0m
+[0;32mI (32651) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (32651) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (32651) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (32651) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (32651) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (32661) UART: Sent Identification Message[0m
+[0;32mI (43631) RX_TASK: Read 11 bytes:[0m
+[0;32mI (43631) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (43631) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (43631) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (43631) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (43631) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (43641) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (43641) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (43641) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (43651) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (43651) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (43661) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (53631) RX_TASK: Read 5 bytes:[0m
+[0;32mI (53631) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (53631) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (53631) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (53631) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (53631) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (53641) UART: Sent Identification Message[0m
+[0;32mI (64651) RX_TASK: Read 11 bytes:[0m
+[0;32mI (64651) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (64651) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (64651) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (64651) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (64651) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (64661) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (64661) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (64661) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (64671) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (64671) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (64681) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (74651) RX_TASK: Read 5 bytes:[0m
+[0;32mI (74651) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (74651) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (74651) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (74651) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (74651) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (74661) UART: Sent Identification Message[0m
+[0;32mI (85631) RX_TASK: Read 11 bytes:[0m
+[0;32mI (85631) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (85631) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (85631) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (85631) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (85631) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (85641) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (85641) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (85641) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (85651) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (85651) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (85661) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (95631) RX_TASK: Read 5 bytes:[0m
+[0;32mI (95631) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (95631) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (95631) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (95631) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (95631) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (95641) UART: Sent Identification Message[0m
+[0;32mI (106651) RX_TASK: Read 11 bytes:[0m
+[0;32mI (106651) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (106651) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (106651) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (106651) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (106651) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (106661) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (106661) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (106671) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (106671) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (106671) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (106681) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (116651) RX_TASK: Read 5 bytes:[0m
+[0;32mI (116651) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (116651) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (116651) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (116651) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (116651) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (116661) UART: Sent Identification Message[0m
+[0;32mI (127631) RX_TASK: Read 11 bytes:[0m
+[0;32mI (127631) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (127631) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (127631) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (127631) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (127631) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (127641) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (127641) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (127651) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (127651) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (127651) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (127661) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (137631) RX_TASK: Read 5 bytes:[0m
+[0;32mI (137631) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (137631) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (137631) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (137631) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (137631) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (137641) UART: Sent Identification Message[0m
+[0;32mI (148651) RX_TASK: Read 11 bytes:[0m
+[0;32mI (148651) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (148651) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (148651) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (148651) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (148651) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (148661) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (148661) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (148671) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (148671) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (148671) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (148681) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (158651) RX_TASK: Read 5 bytes:[0m
+[0;32mI (158651) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (158651) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (158651) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (158651) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (158651) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (158661) UART: Sent Identification Message[0m
+[0;32mI (169631) RX_TASK: Read 11 bytes:[0m
+[0;32mI (169631) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (169631) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (169631) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (169631) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (169631) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (169641) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (169641) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (169651) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (169651) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (169651) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (169661) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (179631) RX_TASK: Read 5 bytes:[0m
+[0;32mI (179631) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (179631) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (179631) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (179631) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (179631) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (179641) UART: Sent Identification Message[0m
+[0;32mI (190651) RX_TASK: Read 11 bytes:[0m
+[0;32mI (190651) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (190651) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (190651) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (190651) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (190651) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (190661) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (190661) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (190671) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (190671) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (190671) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (190681) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (200651) RX_TASK: Read 5 bytes:[0m
+[0;32mI (200651) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (200651) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (200651) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (200651) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (200651) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (200661) UART: Sent Identification Message[0m
+[0;32mI (205421) RX_TASK: Read 5 bytes:[0m
+[0;32mI (205421) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (205421) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (205421) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (205421) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (205421) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (205431) UART: Sent Identification Message[0m
+[0;32mI (206971) RX_TASK: Read 5 bytes:[0m
+[0;32mI (206971) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (206971) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (206971) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (206971) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (206971) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (206981) UART: Sent Identification Message[0m
+[0;32mI (216971) RX_TASK: Read 5 bytes:[0m
+[0;32mI (216971) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (216971) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (216971) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (216971) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (216971) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (216981) UART: Sent Identification Message[0m
+[0;32mI (227151) RX_TASK: Read 11 bytes:[0m
+[0;32mI (227151) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (227151) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (227151) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (227151) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (227151) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (227161) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (227161) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (227171) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (227171) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (227171) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (227181) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (237051) RX_TASK: Read 5 bytes:[0m
+[0;32mI (237051) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (237051) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (237051) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (237051) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (237051) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (237061) UART: Sent Identification Message[0m
+[0;32mI (247261) RX_TASK: Read 11 bytes:[0m
+[0;32mI (247261) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (247261) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (247261) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (247261) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (247261) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (247271) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (247271) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (247281) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (247281) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (247281) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (247291) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (257151) RX_TASK: Read 5 bytes:[0m
+[0;32mI (257151) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (257151) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (257151) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (257151) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (257151) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (257161) UART: Sent Identification Message[0m
+[0;32mI (267371) RX_TASK: Read 11 bytes:[0m
+[0;32mI (267371) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (267371) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (267371) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (267371) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (267371) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (267381) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (267381) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (267391) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (267391) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (267391) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (267401) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (277261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (277261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (277261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (277261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (277261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (277261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (277271) UART: Sent Identification Message[0m
+[0;32mI (287451) RX_TASK: Read 11 bytes:[0m
+[0;32mI (287451) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (287451) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (287451) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (287451) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (287451) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (287461) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (287461) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (287471) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (287471) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (287471) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (287481) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (297371) RX_TASK: Read 5 bytes:[0m
+[0;32mI (297371) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (297371) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (297371) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (297371) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (297371) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (297381) UART: Sent Identification Message[0m
+[0;32mI (307551) RX_TASK: Read 11 bytes:[0m
+[0;32mI (307551) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (307551) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (307551) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (307551) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (307551) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (307561) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (307561) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (307571) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (307571) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (307571) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (307581) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (317471) RX_TASK: Read 5 bytes:[0m
+[0;32mI (317471) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (317471) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (317471) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (317471) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (317471) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (317481) UART: Sent Identification Message[0m
+[0;32mI (327661) RX_TASK: Read 11 bytes:[0m
+[0;32mI (327661) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (327661) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (327661) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (327661) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (327661) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (327671) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (327671) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (327681) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (327681) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (327681) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (327691) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (332571) RX_TASK: Read 5 bytes:[0m
+[0;32mI (332571) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (332571) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (332571) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (332571) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (332571) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (332581) UART: Sent Identification Message[0m
+[0;32mI (334171) RX_TASK: Read 5 bytes:[0m
+[0;32mI (334171) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (334171) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (334171) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (334171) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (334171) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (334181) UART: Sent Identification Message[0m
+[0;32mI (344651) RX_TASK: Read 5 bytes:[0m
+[0;32mI (344651) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (344651) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (344651) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (344651) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (344651) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (344661) UART: Sent Identification Message[0m
+[0;32mI (355261) RX_TASK: Read 11 bytes:[0m
+[0;32mI (355261) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (355261) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (355261) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (355261) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (355261) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (355271) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (355271) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (355281) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (355281) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (355281) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (355291) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (365771) RX_TASK: Read 5 bytes:[0m
+[0;32mI (365771) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (365771) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (365771) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (365771) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (365771) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (365781) UART: Sent Identification Message[0m
+[0;32mI (376351) RX_TASK: Read 11 bytes:[0m
+[0;32mI (376351) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (376351) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (376351) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (376351) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (376351) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (376361) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (376361) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (376371) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (376371) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (376371) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (376381) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (386861) RX_TASK: Read 5 bytes:[0m
+[0;32mI (386861) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (386861) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (386861) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (386861) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (386861) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (386871) UART: Sent Identification Message[0m
+[0;32mI (397451) RX_TASK: Read 11 bytes:[0m
+[0;32mI (397451) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (397451) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (397451) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (397451) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (397451) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (397461) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (397461) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (397471) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (397471) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (397471) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (397481) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (407951) RX_TASK: Read 5 bytes:[0m
+[0;32mI (407951) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (407951) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (407951) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (407951) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (407951) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (407961) UART: Sent Identification Message[0m
+[0;32mI (418571) RX_TASK: Read 11 bytes:[0m
+[0;32mI (418571) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (418571) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (418571) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (418571) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (418571) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (418581) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (418581) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (418591) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (418591) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (418591) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (418601) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (429071) RX_TASK: Read 5 bytes:[0m
+[0;32mI (429071) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (429071) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (429071) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (429071) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (429071) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (429081) UART: Sent Identification Message[0m
+[0;32mI (439661) RX_TASK: Read 11 bytes:[0m
+[0;32mI (439661) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (439661) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (439661) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (439661) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (439661) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (439671) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (439671) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (439681) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (439681) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (439681) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (439691) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (450171) RX_TASK: Read 5 bytes:[0m
+[0;32mI (450171) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (450171) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (450171) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (450171) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (450171) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (450181) UART: Sent Identification Message[0m
+[0;32mI (460751) RX_TASK: Read 11 bytes:[0m
+[0;32mI (460751) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (460751) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (460751) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (460751) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (460751) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (460761) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (460761) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (460771) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (460771) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (460771) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (460781) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (471261) RX_TASK: Read 5 bytes:[0m
+[0;32mI (471261) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (471261) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (471261) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (471261) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (471261) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (471271) UART: Sent Identification Message[0m
+[0;32mI (481871) RX_TASK: Read 11 bytes:[0m
+[0;32mI (481871) RX_TASK: Byte 0: 0x06[0m
+[0;32mI (481871) RX_TASK: Byte 1: 0x30[0m
+[0;32mI (481871) RX_TASK: Byte 2: 0x34[0m
+[0;32mI (481871) RX_TASK: Byte 3: 0x30[0m
+[0;32mI (481871) RX_TASK: Byte 4: 0x0D[0m
+[0;32mI (481881) RX_TASK: Byte 5: 0x0A[0m
+[0;32mI (481881) RX_TASK: Byte 6: 0x2F[0m
+[0;32mI (481891) RX_TASK: Byte 7: 0x3F[0m
+[0;32mI (481891) RX_TASK: Byte 8: 0x21[0m
+[0;32mI (481891) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (481901) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (492351) RX_TASK: Read 5 bytes:[0m
+[0;32mI (492351) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (492351) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (492351) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (492351) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (492351) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (492361) UART: Sent Identification Message[0m
+[0;32mI (499791) RX_TASK: Read 5 bytes:[0m
+[0;32mI (499791) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (499791) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (499791) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (499791) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (499791) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (499801) UART: Sent Identification Message[0m
+[0;32mI (501341) RX_TASK: Read 5 bytes:[0m
+[0;32mI (501341) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (501341) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (501341) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (501341) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (501341) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (501351) UART: Sent Identification Message[0m
+[0;32mI (511451) RX_TASK: Read 5 bytes:[0m
+[0;32mI (511451) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (511451) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (511451) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (511451) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (511451) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (511461) UART: Sent Identification Message[0m
+[0;32mI (521741) RX_TASK: Read 11 bytes:[0m
+[0;32mI (521741) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (521741) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (521741) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (521741) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (521741) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (521751) RX_TASK: Byte 5: 0x06[0m
+[0;32mI (521751) RX_TASK: Byte 6: 0x30[0m
+[0;32mI (521761) RX_TASK: Byte 7: 0x34[0m
+[0;32mI (521761) RX_TASK: Byte 8: 0x30[0m
+[0;32mI (521761) RX_TASK: Byte 9: 0x0D[0m
+[0;32mI (521771) RX_TASK: Byte 10: 0x0A[0m
+[0;32mI (531741) RX_TASK: Read 5 bytes:[0m
+[0;32mI (531741) RX_TASK: Byte 0: 0x2F[0m
+[0;32mI (531741) RX_TASK: Byte 1: 0x3F[0m
+[0;32mI (531741) RX_TASK: Byte 2: 0x21[0m
+[0;32mI (531741) RX_TASK: Byte 3: 0x0D[0m
+[0;32mI (531741) RX_TASK: Byte 4: 0x0A[0m
+[0;32mI (531751) UART: Sent Identification Message[0m
